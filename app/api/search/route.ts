@@ -5,7 +5,6 @@ export async function GET(req : NextRequest , res : NextResponse){
     try {
         let uni = await fetch("http://universities.hipolabs.com");
         let uni_data = await uni.json();
-        console.log(uni_data);
         return NextResponse.json(uni_data)
     } catch (error) {
         
